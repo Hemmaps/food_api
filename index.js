@@ -1,10 +1,12 @@
 
 const express = require('express')
 const app = express()
+const dotenv = require('dotenv')
+dotenv.config()
 app.use(express.json())
 require('./conn')
 const foodRecord = require('./model')
-const port = 8000;
+const port = process.env.PORT || 4000;
 
 app.get('/',(req,res)=>{
     res.send('<h1>Welcome to food and nutritional data API </h1>');
