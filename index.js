@@ -10,7 +10,7 @@ const foodRecord = require('./model');
 const port = process.env.PORT || 4000;
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html')); // Use path.join to resolve the file path
+    res.send("hello"); // Use path.join to resolve the file path
 });
 
 app.post('/food', async (req, res) => {
